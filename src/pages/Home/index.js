@@ -19,7 +19,7 @@ export default function Home () {
               },
             })
 
-            setFilmes(response.data.results.slice(0, 10))
+            setFilmes(response.data.results.slice(0, 14))
             setLoading(false)
         }
 
@@ -39,11 +39,11 @@ export default function Home () {
                 {filmes.map((filme)=>{
                     return (
                       <article key={filme.id}>
-                        <strong>{filme.title}</strong>
-                        <img
+                        {/* <strong>{filme.title}</strong> */}
+                        
+                        <Link to={`/filme/${filme.id}`}><img
                           src={`https://image.tmdb.org/t/p/w500/${filme.poster_path}`} alt={filme.title}
-                        />
-                        <Link to={`/filme/${filme.id}`}>Acessar</Link>
+                        /></Link>
                       </article>
                     )
                 })}
