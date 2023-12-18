@@ -1,0 +1,94 @@
+{
+  "Criar Função em React Native": {
+    "prefix": "rnfunc",
+    "body": [
+      "import { View, Text } from \"react-native\"",
+      "",
+      "export function ${TM_FILENAME_BASE/^.+\\\\/(.*)$/$1/} () {",
+      "    return (",
+      "        <View>",
+      "            <Text>${TM_FILENAME_BASE/^.+\\\\/(.*)$/$1/}</Text>",
+      "        </View>",
+      "    )",
+      "}"
+    ],
+    "description": "Criar Função em React Native"
+  },
+
+  "Criar Função em React": {
+    "prefix": "rfunc",
+    "body": [
+      "export function ${TM_FILENAME_BASE/^.+\\\\\\\\/(.*)$/$1/} () {",
+      "    return (",
+      "        <div>",
+      "            <p>${TM_FILENAME_BASE/^.+\\\\\\\\/(.*)$/$1/}</p>",
+      "        </div>",
+      "    )",
+      "}"
+    ],
+    "description": "Criar Função em React"
+  },
+
+  "Express Server": {
+    "prefix": "xpress",
+    "body": [
+      "const express = require('express')",
+      "const app = express()",
+      "app.use(express.json())",
+      "app.listen('3000')",
+      "app.route('/').get((req, res) => res.send('Hello World'))"
+    ],
+    "description": "Express Server"
+  },
+
+  "Init my CSS": {
+    "prefix": "init",
+    "body": [
+      "* {",
+      "  margin: 0;",
+      "  padding: 0;",
+      "  box-sizing: border-box;",
+      "  -webkit-font-smoothing: antialiased;",
+      "  -moz-osx-font-smoothing: grayscale;",
+      "}",
+      "",
+      ":root {",
+      "  font-size: 62,5%;",
+      "}",
+      "",
+      "body {",
+      "  font-size: 1.6rem;",
+      "}"
+    ],
+    "description": "Init my CSS"
+  },
+
+  "Constructor": {
+    "prefix": "contruc",
+    "body": [
+      "constructor(props){",
+      "  super(props);",
+      "  this.state = {};",
+      "}"
+    ],
+    "description": "Constructor"
+  },
+
+  "Criar class component em React": {
+  "prefix": "rclass",
+  "body": [
+    "import React, { Component } from 'react'",
+    "",
+    "class ${TM_FILENAME_BASE/^.+\\\\\\\\\\\\\\\\/(.*)$/$1/} extends Component {",
+    "  render() {",
+    "    return(",
+    "      <div>",
+    "        ${TM_FILENAME_BASE/^.+\\\\\\\\\\\\\\\\/(.*)$/$1/}",
+    "      </div>",
+    "     )",
+    "  }",
+    "}"
+  ],
+  "description": "Criar class component em React"
+  }
+}
